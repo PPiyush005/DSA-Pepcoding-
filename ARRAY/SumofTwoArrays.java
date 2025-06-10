@@ -1,3 +1,5 @@
+//REVISE
+
 package ARRAY;
 import java.util.*;
 public class SumofTwoArrays {
@@ -15,16 +17,34 @@ public class SumofTwoArrays {
             arr2[i]=sc.nextInt();
         }
 
-        int c=0;
-        if (b>a) {
-            c=b;
-        }else{
-            c=a;
+        int arr3[]= new int[a>b? a:b];
+        int carry=0;
+
+        int i=arr1.length-1;
+        int j=arr2.length-1;
+        int k=arr3.length-1;
+
+        while (k>=0) {
+            int d=carry;
+            if (i>=0) {
+                d+=arr1[i];
+            }
+            if (j>=0) {
+                d+=arr2[j];
+            }
+            carry=d/10;
+            d=d%10;
+
+            arr3[k]=d;
+            i--;
+            j--;
+            k--;
         }
-        int arr3[]= new int[c];
-        for(int i=0;i<c;i++){
-            arr3[i]=arr1[i]+arr2[i];
-            System.out.println(arr3[i]);
+        if(carry!=0){
+            System.out.println(carry);
+        }
+        for(int val:arr3){
+            System.out.println(val);
         }
     }
 }
