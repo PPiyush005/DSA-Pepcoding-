@@ -18,6 +18,6 @@ public class Reverseanumber {
             System.out.println(r);
             n=n/10;
         }
-
+        sc.close();
     }
 }

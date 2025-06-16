@@ -12,6 +12,6 @@ public class CountDigitsinaNumber {
             digit++;
         }
         System.out.println(digit);
-        
+        sc.close();
     }
 }

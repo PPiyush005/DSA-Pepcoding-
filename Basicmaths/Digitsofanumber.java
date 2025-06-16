@@ -17,5 +17,6 @@ public class Digitsofanumber {
             System.out.println(q);
             n=n%i;
         }
+        sc.close();
     }
 }
