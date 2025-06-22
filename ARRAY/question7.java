@@ -19,6 +19,9 @@ public class question7 {
                 arr2[i]=arr1[i];
                 System.out.println(arr2[i]);
             }
+            else{
+                System.out.println(arr2[i]);
+            }
         }
     }
 }
