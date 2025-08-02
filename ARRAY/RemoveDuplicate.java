@@ -10,20 +10,23 @@ public class RemoveDuplicate {
         for(int i = 0 ; i<n ; i++){
             arr[i] = sc.nextInt();
         }
-
+        int rd=0;
         int temp[] = new int [n];
-        for(int i =0 ; i<temp.length-1;i++){
-            if (arr[i]==arr[i+1]) {
-                temp[i]=arr[i+1];
+        temp[rd++]=arr[0];
+        for(int i =1 ; i<temp.length-1;i++){
+            boolean isduplicate =false;
+            for(int j=0;j<rd;j++){
+                if (arr[i]==arr[j]) {
+                    isduplicate=true;
+                    break;
+                }
+            }
+            if (!isduplicate) {
+                temp[rd++]=arr[i];
             }
         }
-        for(int i = 0 ; i<n ; i++){
-            if (temp[i]==0) {
-                continue;
-            }
-            else{
+        for(int i = 0 ; i<rd ; i++){
             System.out.print(temp[i] + " ");
-            }
         }
     }
 }
